@@ -81,6 +81,14 @@ describe("findPath", () => {
     // Since findPath is conceptual in PS0, you might just check if it returns *something*
     expect(pathInstructions).to.be.an("array");
     // More detailed tests would involve analyzing the *content* of pathInstructions if you define a specific output format.
+    const expectedInstructions = [
+      "turn 0",        
+      "forward 30",    
+      "turn 90",       
+      "forward 30"  
+    ];
+
+    expect(pathInstructions).to.deep.equal(expectedInstructions);
   });
 });
 
